@@ -5,8 +5,10 @@ apply plugin: 'war'
 apply plugin: 'liberty'
 // end::liberty[]
 
-sourceCompatibility = 11
-targetCompatibility = 11
+// java {
+//     sourceCompatibility = JavaVersion.VERSION_17
+// }
+
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
