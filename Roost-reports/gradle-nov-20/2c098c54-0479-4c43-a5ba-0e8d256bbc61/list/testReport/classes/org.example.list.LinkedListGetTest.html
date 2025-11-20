@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - LinkedListGetTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>LinkedListGetTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.example.list.html">org.example.list</a> &gt; LinkedListGetTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">22</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.054s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">95%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Failed tests</a>
+</li>
+<li>
+<a href="#">Tests</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="throwExceptionWhenIndexIsNegative()"></a>
+<h3 class="failures">throwExceptionWhenIndexIsNegative()</h3>
+<span class="code">
+<pre id="test-message-throwExceptionWhenIndexIsNegative()">org.opentest4j.AssertionFailedError: Expected java.lang.IndexOutOfBoundsException to be thrown, but nothing was thrown.
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at app//org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at app//org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at app//org.example.list.LinkedListGetTest.throwExceptionWhenIndexIsNegative(LinkedListGetTest.java:92)
+	at java.base@21.0.9/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.9/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.9/java.util.ArrayList.forEach(ArrayList.java:1596)
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="test-message-throwExceptionWhenIndexIsNegative()">Copy</button>
+</span>
+</div>
+</div>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">retrieveElementAfterAddingMultipleElements()</td>
+<td class="success">retrieveElementAfterAddingMultipleElements()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementAfterRemovingElements()</td>
+<td class="success">retrieveElementAfterRemovingElements()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementAtBoundaryIndex()</td>
+<td class="success">retrieveElementAtBoundaryIndex()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementAtIndexZero()</td>
+<td class="success">retrieveElementAtIndexZero()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementAtLastIndex()</td>
+<td class="success">retrieveElementAtLastIndex()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementAtLastIndexFromLargeList()</td>
+<td class="success">retrieveElementAtLastIndexFromLargeList()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementAtMiddleIndex()</td>
+<td class="success">retrieveElementAtMiddleIndex()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementAtZeroIndexFromLargeList()</td>
+<td class="success">retrieveElementAtZeroIndexFromLargeList()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementFromSingleElementList()</td>
+<td class="success">retrieveElementFromSingleElementList()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementWithEmptyString()</td>
+<td class="success">retrieveElementWithEmptyString()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementWithLongString()</td>
+<td class="success">retrieveElementWithLongString()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">retrieveElementWithSpecialCharacters()</td>
+<td class="success">retrieveElementWithSpecialCharacters()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] 0, First</td>
+<td class="success">retrieveMultipleElementsAtDifferentIndices(int, String)[1]</td>
+<td class="success">0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] 1, Second</td>
+<td class="success">retrieveMultipleElementsAtDifferentIndices(int, String)[2]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] 2, Third</td>
+<td class="success">retrieveMultipleElementsAtDifferentIndices(int, String)[3]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] 3, Fourth</td>
+<td class="success">retrieveMultipleElementsAtDifferentIndices(int, String)[4]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] 4, Fifth</td>
+<td class="success">retrieveMultipleElementsAtDifferentIndices(int, String)[5]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">throwExceptionWhenIndexEqualsListSize()</td>
+<td class="success">throwExceptionWhenIndexEqualsListSize()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">throwExceptionWhenIndexExceedsListSize()</td>
+<td class="success">throwExceptionWhenIndexExceedsListSize()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">throwExceptionWhenIndexIsLargeNumber()</td>
+<td class="success">throwExceptionWhenIndexIsLargeNumber()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">throwExceptionWhenIndexIsNegative()</td>
+<td class="failures">throwExceptionWhenIndexIsNegative()</td>
+<td class="failures">0.013s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">throwExceptionWhenListIsEmpty()</td>
+<td class="success">throwExceptionWhenListIsEmpty()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.1.0</a> at Nov 20, 2025, 1:02:18 PM</p>
+</div>
+</div>
+</body>
+</html>
