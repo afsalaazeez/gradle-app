@@ -1,5 +1,3 @@
-//This test file is marked invalid as it contains compilation errors. Change the extension to of this file to .java, to manually edit its contents
-
 
 // ********RoostGPT********
 /*
@@ -86,11 +84,14 @@ Execution:
 Validation:
   The assertion confirms the current implementation behavior where the list is passed through directly. This test documents the expected behavior and would detect any future changes that introduce defensive copying or list transformation.
 
+
+roost_feedback [26/11/2025, 12:34:14 PM]:Modify\sCode\sto\sfix\sthis\serror\n/var/tmp/Roost/RoostGPT/nov-26-gradle/00548134-5de4-4c12-90ee-c21c7a90a95c/source/gradle-app/demo/src/test/java/com/example/demo/web/CustomerControllerTest.java:25:\swarning:\s[removal]\sMockBean\sin\sorg.springframework.boot.test.mock.mockito\shas\sbeen\sdeprecated\sand\smarked\sfor\sremoval\n\s\s\s\s@MockBean\n\s\s\s\s\s^\n1\swarning\nOpenJDK\s64-Bit\sServer\sVM\swarning:\sSharing\sis\sonly\ssupported\sfor\sboot\sloader\sclasses\sbecause\sbootstrap\sclasspath\shas\sbeen\sappended
 */
 
 // ********RoostGPT********
 
 package com.example.demo.service;
+
 import com.example.demo.domain.Customer;
 import com.example.demo.domain.CustomerRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -121,15 +122,12 @@ class CustomerServiceGetAllCustomersTest {
     @Test
     @Tag("valid")
     void getAllCustomersReturnsListWhenMultipleCustomersExist() {
-        // Arrange
         Customer customer1 = new Customer();
         Customer customer2 = new Customer();
         Customer customer3 = new Customer();
         List<Customer> expectedCustomers = Arrays.asList(customer1, customer2, customer3);
         when(customerRepository.findAll()).thenReturn(expectedCustomers);
-        // Act
         List<Customer> actualCustomers = customerService.getAllCustomers();
-        // Assert
         assertNotNull(actualCustomers);
         assertEquals(3, actualCustomers.size());
         assertEquals(expectedCustomers, actualCustomers);
@@ -137,12 +135,9 @@ class CustomerServiceGetAllCustomersTest {
     @Test
     @Tag("boundary")
     void getAllCustomersReturnsEmptyListWhenNoCustomersExist() {
-        // Arrange
         List<Customer> emptyList = Collections.emptyList();
         when(customerRepository.findAll()).thenReturn(emptyList);
-        // Act
         List<Customer> actualCustomers = customerService.getAllCustomers();
-        // Assert
         assertNotNull(actualCustomers);
         assertTrue(actualCustomers.isEmpty());
         assertEquals(0, actualCustomers.size());
@@ -150,13 +145,10 @@ class CustomerServiceGetAllCustomersTest {
     @Test
     @Tag("boundary")
     void getAllCustomersReturnsListWithSingleCustomer() {
-        // Arrange
         Customer singleCustomer = new Customer();
         List<Customer> singleCustomerList = Collections.singletonList(singleCustomer);
         when(customerRepository.findAll()).thenReturn(singleCustomerList);
-        // Act
         List<Customer> actualCustomers = customerService.getAllCustomers();
-        // Assert
         assertNotNull(actualCustomers);
         assertEquals(1, actualCustomers.size());
         assertTrue(actualCustomers.contains(singleCustomer));
@@ -164,24 +156,18 @@ class CustomerServiceGetAllCustomersTest {
     @Test
     @Tag("valid")
     void getAllCustomersCallsRepositoryFindAllOnce() {
-        // Arrange
         List<Customer> customerList = new ArrayList<>();
         when(customerRepository.findAll()).thenReturn(customerList);
-        // Act
         customerService.getAllCustomers();
-        // Assert
         verify(customerRepository, times(1)).findAll();
     }
     @Test
     @Tag("valid")
     void getAllCustomersReturnsSameListFromRepository() {
-        // Arrange
         List<Customer> repositoryList = new ArrayList<>();
         repositoryList.add(new Customer());
         when(customerRepository.findAll()).thenReturn(repositoryList);
-        // Act
         List<Customer> actualCustomers = customerService.getAllCustomers();
-        // Assert
         assertSame(repositoryList, actualCustomers);
     }
 }
